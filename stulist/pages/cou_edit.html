@@ -1,0 +1,19 @@
+﻿{% extends "base.html" %}
+{% block title %} 
+  修改学生信息
+{% end %}
+
+{% block content %} 
+
+	<a href="/coulist"><font color="#fffffff">返回学生清单</a>
+	
+	<form action="/couedit/{{course['cou_sn']}}" method="post">
+    学&nbsp&nbsp&nbsp&nbsp号：<input type="text" name="stu_no" value="{{course['stu_no']}}"><br>
+    出生日期：<input type="text" name="cou_no" value="{{course['cou_no']}}"><br>
+    姓&nbsp&nbsp&nbsp&nbsp名：<input type="text" name="name" value="{{course['name']}}"> <br>
+    性&nbsp&nbsp&nbsp&nbsp别：<input type="text" name="sex" value="{{course['sex']}}"> <br>
+    班&nbsp&nbsp&nbsp&nbsp级：<input type="text" name="grade" value="{{course['grade']}}"> <br>
+    <input type="submit" value="提交">
+    </form>
+
+{% end %}
